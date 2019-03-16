@@ -35,8 +35,8 @@ public:
 	threadstate GetThreadState();
 
 	unsigned long GetThreadID();
-	void SetThreadID(unsigned long id);
-	bool SetPriority(int priority);
+	void SetThreadID(unsigned long id);     //invalid
+	bool SetPriority(int priority);    
 	int GetPriority();
 	bool isSafeExit();
 
@@ -44,8 +44,8 @@ protected:
 	void ThreadFunction(void*);
 
 private:
-	unsigned long id;
-	threadpool *p;
+	unsigned long id;          //invalid
+	threadpool *p;             //belongs to pool
 	threadstate state;
 	task *t;
 	int priority;
